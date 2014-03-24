@@ -10,7 +10,6 @@ public class JTableRender extends DefaultTableCellRenderer {
     @Override
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
         JTextField editor = new JTextField();
-        table.setShowHorizontalLines(false);
         if (value != null)
             editor.setText(value.toString());
         if (table.isRowSelected(row))

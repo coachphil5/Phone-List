@@ -3,8 +3,6 @@
  */
 public class PhoneList {
     public static void main(String[] args) {
-        GuiInit gui = new GuiInit();
-        gui.setSize(300,700);
-        gui.setVisible(true);
+        new GuiInit();
     }
 }

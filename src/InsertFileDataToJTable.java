@@ -42,7 +42,7 @@ public class InsertFileDataToJTable extends AbstractTableModel {
     }
 
     public Object getValueAt(int rowIndex, int columnIndex) {
-        return (String) data.elementAt((rowIndex * getColumnCount())
+        return data.elementAt((rowIndex * getColumnCount())
                 + columnIndex);
     }
 

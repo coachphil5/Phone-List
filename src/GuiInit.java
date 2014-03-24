@@ -6,14 +6,17 @@ import java.awt.*;
  */
 public class GuiInit extends JFrame {
     public GuiInit() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         //this.setUndecorated(true);
         JTable table = new JTable(new InsertFileDataToJTable());
         table.setRowHeight(table.getRowHeight() + 8);
+        table.setShowHorizontalLines(false);
         table.setRowSelectionAllowed(true);
         table.setDefaultRenderer(Object.class, new JTableRender());
         getContentPane().add(new JScrollPane(table), BorderLayout.CENTER);
-        this.setTitle("Phone List");
         pack();
+        this.setTitle("Phone List");
+        this.setSize(300,750);
+        this.setVisible(true);
     }
 }
