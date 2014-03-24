@@ -1,18 +1,27 @@
 F12::
-IfWinExist Phone List
-	{
-	WinGet, state, MinMax, Phone List
-	if (state=0)
-		{
-		WinMinimize, Phone List ;WinHide WinMinimize
-		}
-	else
-		{
-		;DetectHiddenWindows, On
-		WinRestore, Phone List ;WinShow WinRestore
-		}
+DetectHiddenWindows,on
+IfWinExist, ahk_id %Main_Window%
+    {
+        if (state=0)
+            {
+				;MsgBox Made IT TO HIDE
+		        WinHide, ahk_id %Main_Window% ;WinHide WinMinimize
+		        state=1;
+		    }
+	    else
+		    {
+				;MsgBox Made IT TO RESTORE
+				;DetectHiddenWindows,on
+				SetTitleMatchMode,2
+		        WinRestore, ahk_id %Main_Window% ;WinShow WinRestore
+		        state=0
+		    }
 	}
 else
 	{
-	Run C:\Users\JOINTJUICE\Desktop\Phone List.jar
+	    Run C:\Users\JOINTJUICE\Desktop\Phone List.jar
+		Sleep 500
+	    ;Main_Window := WinExist("A")
+		WinGet, Main_Window, ID, A
+	    state=0
 	}
