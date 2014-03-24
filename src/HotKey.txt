@@ -1,0 +1,18 @@
+F12::
+IfWinExist Phone List
+	{
+	WinGet, state, MinMax, Phone List
+	if (state=0)
+		{
+		WinMinimize, Phone List ;WinHide WinMinimize
+		}
+	else
+		{
+		;DetectHiddenWindows, On
+		WinRestore, Phone List ;WinShow WinRestore
+		}
+	}
+else
+	{
+	Run C:\Users\JOINTJUICE\Desktop\Phone List.jar
+	}
