@@ -7,6 +7,8 @@ import java.util.Vector;
 
 /**
  * Created by JOINTJUICE on 3/22/14.
+ * Simple class to extract data from tab delimited text file and insert into JTable, uses first column
+ * of data for table rows header.
  */
 public class InsertFileDataToJTable extends AbstractTableModel {
     Vector data;

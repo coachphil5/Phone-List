@@ -3,6 +3,7 @@ import java.awt.*;
 
 /**
  * Created by JOINTJUICE on 3/22/2014.
+ * Put this into a separate class from main class for practice.
  */
 public class GuiInit extends JFrame {
     public GuiInit() {
@@ -16,7 +17,7 @@ public class GuiInit extends JFrame {
         getContentPane().add(new JScrollPane(table), BorderLayout.CENTER);
         pack();
         this.setTitle("Phone List");
-        this.setSize(300,750);
+        this.setSize(300, 750);
         this.setVisible(true);
     }
 }

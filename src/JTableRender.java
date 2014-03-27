@@ -4,6 +4,8 @@ import java.awt.*;
 
 /**
  * Created by JOINTJUICE on 3/22/14.
+ * Class to make JTable alternate table row color, highlight table row during mouse click and
+ * change border to make text easier to read.
  */
 public class JTableRender extends DefaultTableCellRenderer {
 

@@ -2,6 +2,7 @@ F12::
 DetectHiddenWindows,on
 IfWinExist, ahk_id %Main_Window%
 	{
+	WinSet, AlwaysOnTop, toggle, ahk_id %Main_Window%
 	if (state=0)
 		{
 			WinHide, ahk_id %Main_Window%
